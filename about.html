@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>  <!-- Link back to the Home page -->
+                    <li><a href="#">About</a></li>  <!-- Active About Page -->
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+             <div class="row">
+                <div class="about-col-1">
+                    <img src="img22.png" alt="Description of the image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>   I am a passionate UI designer 
+                        with a keen eye for aesthetics and 
+                        usability. With a background in
+                        graphic design, I create visually 
+                        engaging interfaces that enhance user experience.
+                        My approach blends creativity and functionality, 
+                        ensuring every design not only looks great but 
+                        also serves its purpose effectively. I thrive on 
+                        collaboration and enjoy turning ideas into reality 
+                        through thoughtful design. Let's bring your vision to life!
+                        My proficiency in tools like Figma, Adobe XD, and Sketch 
+                        allows me to translate ideas into visually appealing designs. 
+                        I'm constantly exploring new trends and techniques to stay 
+                        ahead in this ever-evolving field. Let's create something amazing 
+                        together!
+                        Collaboration is at the heart of my process. I love working with 
+                        developers and stakeholders to bring concepts to life, ensuring 
+                        every detail is perfect. 
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>App Development</span><br>Building Android/iOS apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2024 - Current</span><br>UI/UX Design Training at ET
+                                Institute</li>
+                                <li><span>2022-2024</span><br>Team lead at StarApp LIC.</li>
+                                <li><span>2019-2021</span><br>UI/UX Design Executive at coin
+                                Digital Ltd.</li>
+                                <li><span>2017-2018</span><br>Internship at ekart eCommerce.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2017</span><br>UI/UX Design Training at ET
+                                Institute</li>
+                                <li><span>2015</span><br>M.tech from IIT Bombay.</li>
+                                <li><span>2014</span><br>B.tech from NIT Raipur.</li>
+                            </ul>
+                        </div>
+
+                            
+                        
+                    </p>
+                                         
+                    
+
+                    
+                </div>
+             </div>
+        </div>
+    </div> 
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+
+
+</body>
+</html>

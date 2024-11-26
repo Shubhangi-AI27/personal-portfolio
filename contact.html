@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+</head>
+<body>
+    <div id="contact">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>  <!-- Link back to the Home page -->
+                    <li><a href="about.html">About</a></li>  <!-- Active About Page -->
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>shubhangi.dgn@gmail .com</p>
+                    <p><i class="fa-sharp fa-solid fa-phone"></i>8602202574</p>
+                    <div class="social-icons">
+                       <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                       <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                       <a href=""><i class="fa-brands fa-instagram"></i></a>
+                       <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Shubhangi Pandey.All Rights Reserved.</p>
+        </div>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzIafuQQG-XI-K4GRgSwZsH6xUY-m9xqyXzrW2n-3sO7zpiqgEuKP5Gqle22gPZXYE/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+               msg.innerHTML = "Message sent successfully"
+               setTimeout(function(){
+                msg.innerHTML=""
+               },5000)
+               form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+            
+        })
+      </script>
+
+</body>
+</html>

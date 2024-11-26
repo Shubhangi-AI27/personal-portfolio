@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <div id="portfolio">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>  <!-- Link back to the Home page -->
+                    <li><a href="about.html">About</a></li>  <!-- Active About Page -->
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                <img src="social.jpg" alt="Effective Mobile Website">
+                <div class="layer">
+                    <h2>Social Media App</h2>
+                    <p>The app connects you to the talented people around the world.
+                    Download it from play store.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="mussic.png" alt="Music">
+                <div class="layer">
+                    <h2>Music App</h2>
+                    <p>The app connects you to the talented people around the world.
+                        Download it from play store.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="shopp.png" alt="shop">
+                <div class="layer">
+                    <h2>Online Shopping App</h2>
+                    <p>The app connects you to the talented people around the world.
+                        Download it from play store.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </div>
+</div>
+<a href="#" class="btn">See more</a>
+     </div>
+</div>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+</body>
+</html>

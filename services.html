@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <div id="services">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>  <!-- Link back to the Home page -->
+                    <li><a href="about.html">About</a></li>  <!-- Active About Page -->
+                    <li><a href="#">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-sharp-duotone fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Crafting visually 
+                    engaging, responsive, and 
+                    user-centric website designs 
+                    tailored to your brand's needs.
+                    My designs ensure seamless experiences
+                    across all devices, from desktop to mobile.
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+            <div>
+                <i class="fa-sharp-duotone fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Website and App Interface Design,
+                     ser Journey Mapping and Wireframing.
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                   <h2>App Design</h2>
+                   <p>Creating detailed wireframes and 
+                    interactive prototypes to bring your 
+                    app ideas to life.Crafting a clean 
+                    and modern visual style that resonates 
+                    with your target audience.</p>
+                    <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>    
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script> 
+
+</body>
+</html>
